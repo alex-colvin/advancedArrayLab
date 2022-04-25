@@ -214,19 +214,19 @@ function problemSixA(){
     })
     return results;
 }
-let dishCruisines = problemSixA();
-console.log('The cruisines of the dishes are:', dishCruisines)
+let dishCuisines = problemSixA();
+console.log('The Cuisines of the dishes are:', dishCuisines)
 //Map
 // BONUS: (come back to this after finishing all)
 //6b. Use the filter method to eliminate duplicates, leaving only distinct values in the array
 function problemSixB(){
-    let results = dishCruisines.filter(function(el, index){
-        return dishCruisines.indexOf(el) === index;
+    let results = dishCuisines.filter(function(el, index){
+        return dishCuisines.indexOf(el) === index;
     })
     return results
 }
 let filteredCuisines = problemSixB();
-console.log('The filtered list of cruisines is:', filteredCuisines)
+console.log('The filtered list of Cuisines is:', filteredCuisines)
 //7. Create a function that will append the cuisine type to the start of the dish's name. Ie, "Italian Pizza"
 //Map 
 
@@ -300,8 +300,28 @@ console.log('The total amount of servings on the menu is: ', totalServings)
 
 //11. Create a function that will return an array of any objects that do not share a cuisine type with any other objects.
 
-//first get all the cuisine types map el.cuisine
-//loop through
+function problemEleven(){
+    let nonUniqueCuisines = dishCuisines.filter(function(el, index){
+        if(dishCuisines.indexOf(el) < index){
+            return true;
+        }
+        else{
+            return false;
+        }
+    })
+    let uniqueCuisines = dishes.filter(function(el){
+        if(nonUniqueCuisines.includes(el.cuisine)){
+            return false;
+        }
+        else{
+            return true;
+        }
+    })
+    return uniqueCuisines
+}
+let uniqueCuisines = problemEleven();
+console.log('The unique cuisines are:', uniqueCuisines)
+
 
 
 
