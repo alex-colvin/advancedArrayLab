@@ -207,6 +207,15 @@ let containsChickpeas = problemFive();
 console.log('Foods that contain chickpeas:', containsChickpeas);
 
 //6a. Create a function that will return an array of only the names of the cuisine types. Ie ['Italian', 'Mexican', ...]
+function problemSixA(){
+
+    let results = dishes.map(function(el){
+        return el.cuisine;
+    })
+    return results;
+}
+let dishCruisines = problemSixA();
+console.log('The cruisines of the dishes are:', dishCruisines)
 //Map
 // BONUS: (come back to this after finishing all)
 //6b. Use the filter method to eliminate duplicates, leaving only distinct values in the array
