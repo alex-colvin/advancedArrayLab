@@ -271,7 +271,8 @@ console.log('Foods that contain Tomato or Cheese:', containsTomatoOrCheese);
 
 //11. Create a function that will return an array of any objects that do not share a cuisine type with any other objects.
 
-//first get all the cuisine types 
-//
+//first get all the cuisine types map el.cuisine
+//loop through
+
 
 
