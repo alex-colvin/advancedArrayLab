@@ -284,6 +284,20 @@ console.log('Foods that contain Tomato or Cheese:', containsTomatoOrCheese);
 //10. Create a function that will return the total serving count of all dishes.
 //Must use Reduce, not a loop.
 
+function problemTen(){
+
+    let allServings = dishes.map(function(el){
+        return el.servings
+    })
+
+    let totalServingCount = allServings.reduce(function(total, el){
+        return total + el;
+    })
+    return totalServingCount
+}
+let totalServings = problemTen();
+console.log('The total amount of servings on the menu is: ', totalServings)
+
 //11. Create a function that will return an array of any objects that do not share a cuisine type with any other objects.
 
 //first get all the cuisine types map el.cuisine
