@@ -240,12 +240,30 @@ console.log('Descriptive Dish Names: ', descriptiveName);
 
 //BONUS
 
-//5. Create a function that will return dishes whose ingredients array INCLUDES "tomato" OR "cheese".
+//9. Create a function that will return dishes whose ingredients array INCLUDES "tomato" OR "cheese".
 //Hint: You do not want to check the array's indexes to find out what the array INCLUDES.
 //Filter
+
+function problemNine(){
+
+    let results = dishes.filter(function(el){
+        if(el.ingredients.includes('tomato') || el.ingredients.includes('cheese')){
+            return true;
+        }
+        else{
+            return false;
+        }})
+    return results;
+}
+let containsTomatoOrCheese = problemNine();
+console.log('Foods that contain Tomato or Cheese:', containsTomatoOrCheese);
 
 //10. Create a function that will return the total serving count of all dishes.
 //Must use Reduce, not a loop.
 
 //11. Create a function that will return an array of any objects that do not share a cuisine type with any other objects.
+
+//first get all the cuisine types 
+//
+
 
