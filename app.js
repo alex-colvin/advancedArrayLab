@@ -192,6 +192,20 @@ console.log('Foods with an even servings size:', evenServingSize)
 //Hint: You do not want to check the array's indexes to find out what the array INCLUDES.
 //Filter
 
+function problemFive(){
+
+    let results = dishes.filter(function(el){
+        if(el.ingredients.includes('chickpea')){
+            return true;
+        }
+        else{
+            return false;
+        }})
+    return results;
+}
+let containsChickpeas = problemFive();
+console.log('Foods that contain chickpeas:', containsChickpeas)
+
 //6a. Create a function that will return an array of only the names of the cuisine types. Ie ['Italian', 'Mexican', ...]
 //Map
 // BONUS: (come back to this after finishing all)
